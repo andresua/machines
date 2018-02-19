@@ -41,7 +41,7 @@ CREATE TABLE stock_list (
     id              numeric(18,2),
     id_stock        numeric(18,2),
     id_product      numeric(18,2),
-    id_refound      numeric(18,2)
+    id_refund      numeric(18,2)
     
     PRIMARY KEY(id),
     CONSTRAINT fk_stock FOREIGN KEY (id_stock, id_product, id_refound) REFERENCES stock (id),

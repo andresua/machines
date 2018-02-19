@@ -26,4 +26,10 @@ apt-get install -y kubelet kubeadm kubectl kubernetes-cni
 
 # Instala PostgreSQL
 apt-get update
-apt-get install postgresql postgresql-contrib
+apt-get install postgresql postgresql-contrib}
+
+# Crea Base de datos
+psql postgres -c "CREATE DATABASE inventario WITH ENCODING 'utf-8'"
+psql -c "CREATE USER admin WITH PASSWORD 'admin123';"
+psql postgres -c "CREATE DATABASE inventario WITH ENCODING 'utf-8'"
+psql postgres -c "GRANT ALL PRIVILEGES ON inventario TO admin"
